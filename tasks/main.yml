@@ -1,0 +1,8 @@
+---
+- name: haproxy - install apt package
+  apt:
+    name: "haproxy={{ haproxy_version }}"
+    state: present
+    update_cache: yes
+  notify:
+    haproxy - restart
